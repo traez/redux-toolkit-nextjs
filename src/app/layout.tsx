@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Layout from "@/components/Layout";
+import ReduxLayout from "@/redux/ReduxLayout";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -15,12 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-slate-950 text-slate-200">
-      <Layout>
+      <ReduxLayout>
         <body>
           <Header />
           {children}
         </body>
-      </Layout>
+      </ReduxLayout>
     </html>
   );
 }

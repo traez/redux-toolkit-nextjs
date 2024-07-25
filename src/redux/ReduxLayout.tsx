@@ -7,8 +7,8 @@ interface Props {
   children: React.ReactElement;
 }
 
-const Layout = ({ children }: Props) => {
+const ReduxLayout = ({ children }: Props) => {
   return <Provider store={store}>{children}</Provider>;
 };
 
-export default Layout;
+export default ReduxLayout;

@@ -5,10 +5,10 @@ import { IoClose } from "react-icons/io5";
 import toast, { Toaster } from "react-hot-toast";
 import TodoLists from "./TodoLists";
 import { addTodo, editTodo } from "@/redux/TodoSlice";
-import { RootState } from "../redux/store";
+import { RootState, AppDispatch  } from "../redux/store";
 
 const TodoForm = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const [todoinput, setTodoinput] = useState("");
   const [editingId, setEditingId] = useState<number | null>(null);
   const todoList = useSelector((state: RootState) => state.todo.todoList);
